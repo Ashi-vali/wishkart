@@ -1,0 +1,70 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --font-poppins: "Poppins", sans-serif;
+
+  /* Indian celebration colors */
+  --primary: 24 100% 50%; /* Orange */
+  --primary-foreground: 0 0% 100%;
+  --secondary: 340 75% 55%; /* Pink */
+  --secondary-foreground: 0 0% 100%;
+  --accent: 280 65% 60%; /* Purple */
+  --accent-foreground: 0 0% 100%;
+
+  --background: 0 0% 100%;
+  --foreground: 20 14.3% 4.1%;
+  --card: 0 0% 100%;
+  --card-foreground: 20 14.3% 4.1%;
+  --popover: 0 0% 100%;
+  --popover-foreground: 20 14.3% 4.1%;
+  --muted: 60 4.8% 95.9%;
+  --muted-foreground: 25 5.3% 44.7%;
+  --border: 20 5.9% 90%;
+  --input: 20 5.9% 90%;
+  --ring: 24 100% 50%;
+  --radius: 0.75rem;
+}
+
+.font-poppins {
+  font-family: var(--font-poppins);
+}
+
+/* Custom gradient backgrounds for Indian celebrations */
+.celebration-gradient {
+  background: linear-gradient(135deg, #ff9a56 0%, #ff6b9d 50%, #c44569 100%);
+}
+
+.wedding-gradient {
+  background: linear-gradient(135deg, #ff9a9e 0%, #fecfef 50%, #fecfef 100%);
+}
+
+.birthday-gradient {
+  background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);
+}
+
+.baby-shower-gradient {
+  background: linear-gradient(135deg, #d299c2 0%, #fef9d7 100%);
+}
+
+.housewarming-gradient {
+  background: linear-gradient(135deg, #89f7fe 0%, #66a6ff 100%);
+}
+
+/* PWA specific styles */
+@media (display-mode: standalone) {
+  body {
+    padding-top: env(safe-area-inset-top);
+    padding-bottom: env(safe-area-inset-bottom);
+  }
+}
+
+/* Mobile-first responsive utilities */
+.mobile-container {
+  @apply max-w-md mx-auto px-4;
+}
+
+.celebration-card {
+  @apply bg-white/80 backdrop-blur-sm border border-white/20 shadow-lg rounded-2xl;
+}
